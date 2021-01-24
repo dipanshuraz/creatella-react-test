@@ -1,0 +1,76 @@
+body {
+  background: #cc95c0;
+  background: -webkit-linear-gradient(to right, #7aa1d2, #dbd4b4, #cc95c0);
+  background: linear-gradient(to right, #7aa1d2, #dbd4b4, #cc95c0);
+}
+
+/* Header */
+.header {
+  z-index: 10;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  position: relative;
+  z-index: 10;
+  background: inherit;
+  overflow: hidden;
+}
+
+.header:before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.4);
+  filter: blur(5px);
+  margin: -20px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Grid Box */
+.grid {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+/* FrostBox Css */
+.frostBox {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  position: relative;
+  z-index: 10;
+  background: inherit;
+  overflow: hidden;
+}
+
+.frostBox:before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.4);
+  filter: blur(5px);
+  margin: -20px;
+}
+
+/* Float Scroll To Top Button */
+.float {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 50%;
+  text-align: center;
+}
