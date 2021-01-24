@@ -50,10 +50,8 @@ const Products = ({ fetchProducts, fetchAds, errors, products, end, sort }) => {
   }, [element]);
 
   useEffect(() => {
-    console.log(page, 'page in useeffect');
     fetchProducts(page);
     fetchAds();
-    
   }, [page]);
 
   const handleSort = (event) => {
@@ -102,7 +100,7 @@ const Products = ({ fetchProducts, fetchAds, errors, products, end, sort }) => {
       </header>
 
       {errors && <h1>{errors}</h1>}
-      
+
       <div className="container mt-4">
         <List products={products} />
 
