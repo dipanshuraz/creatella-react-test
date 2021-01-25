@@ -8,6 +8,7 @@ import LoaderGif from './LoaderGif';
 const Products = ({ fetchProducts, fetchAds, errors, products, end, sort }) => {
   let initialPage = 1;
   const [page, setPage] = useState(initialPage);
+  const [sortBy, setSortBy] = useState('');
 
   const load = () => {
     setPage(page + 1);
@@ -50,13 +51,16 @@ const Products = ({ fetchProducts, fetchAds, errors, products, end, sort }) => {
   }, [element]);
 
   useEffect(() => {
-    fetchProducts(page);
+    fetchProducts(page, sortBy);
     fetchAds();
   }, [page]);
 
   const handleSort = (event) => {
     const value = event.target.value;
-    if (sort !== value) {
+    if (sortBy !== value) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setPage(initialPage + 1);
+      setSortBy(value);
       fetchProducts(1, value);
     }
   };
@@ -89,11 +93,12 @@ const Products = ({ fetchProducts, fetchAds, errors, products, end, sort }) => {
               onChange={(event) => handleSort(event)}
               name="sort"
             >
-              <option value="price">price</option>
-              <option value="size">size</option>
-              <option value="id" selected>
-                id
+              <option value="" selected>
+                Sort By
               </option>
+              <option value="price">Price</option>
+              <option value="size">Size</option>
+              <option value="id">Id</option>
             </select>
           </div>
         </form>

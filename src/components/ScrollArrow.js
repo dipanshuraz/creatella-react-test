@@ -21,7 +21,7 @@ const ScrollArrow = () => {
     <>
       <i
         onClick={scrollTop}
-        class="fa fa-arrow-circle-up fa-3x float text-white"
+        className="fa fa-arrow-circle-up fa-3x float text-white"
         aria-hidden="true"
         style={{ display: showScroll ? 'flex' : 'none' }}
       ></i>

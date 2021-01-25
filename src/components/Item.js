@@ -5,8 +5,8 @@ const priceBaloon = {
   position: 'absolute',
   top: -5,
   left: -5,
-  'font-size': '18px',
-  'background-color': '#CC96C0',
+  'fontSize': '18px',
+  'backgroundColor': '#CC96C0',
 };
 
 const Item = ({ size, face, price, date }) => {
@@ -19,7 +19,7 @@ const Item = ({ size, face, price, date }) => {
         <h5 className="card-title" style={{ fontSize: size }}>
           {face}
         </h5>
-        <span style={priceBaloon} class="badge p-3">
+        <span style={priceBaloon} className="badge p-3">
           {centToDollars(price)}
         </span>
       </div>
