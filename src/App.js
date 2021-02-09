@@ -42,8 +42,7 @@ const App = ({ ads }) => {
       </div>
       <div
         className=""
-        style={{ position: 'absolute', top: 0, left: 0, zIndex: 1000 }}
-      >
+        style={{ position: 'absolute', top: 0, left: 0, zIndex: 1000 }}>
         <ScrollArrow />
       </div>
     </div>
